@@ -122,4 +122,9 @@ git diff --exit-code -- sketches/ACStateControl/CapturedButtons.h captures/york-
 
 ## 许可证
 
-许可证尚未指定；公开源码不等于授予复用许可。第三方依赖保留各自许可证。
+允许商用、修改和分发，需按相应许可证保留署名与许可信息。作者：**Alvin Li（Awes0meE）**。
+
+- **代码与固件**：[Apache-2.0](LICENSE)，附 [NOTICE](NOTICE) 署名声明。
+- **文档与采集资料**：[CC BY 4.0](LICENSES/CC-BY-4.0.txt)。
+
+具体适用范围、署名示例和第三方内容边界见 [LICENSING.md](LICENSING.md)。

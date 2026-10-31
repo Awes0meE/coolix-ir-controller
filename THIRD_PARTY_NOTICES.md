@@ -2,6 +2,8 @@
 
 本仓库不打包 `.arduino/`、`.tools/`、`.venv/` 中的第三方工具、库或固件二进制。安装时应保留上游许可证和版权声明。
 
+本项目原创内容的许可范围见 [LICENSING.md](LICENSING.md)。Apache-2.0 与 CC BY 4.0 的项目授权不替换下面各项的原有许可证；分发包含依赖的成品时仍需遵守对应上游条款。
+
 | 项目 | 用途 | 上游 |
 | --- | --- | --- |
 | Arduino-IRremote 4.7.1 | UNO 红外收发库，安装版本使用 MIT License | [代码与许可证](https://github.com/Arduino-IRremote/Arduino-IRremote) |

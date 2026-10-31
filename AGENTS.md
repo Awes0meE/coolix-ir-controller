@@ -26,6 +26,7 @@
 - CapturedButtons.h 和 york-replay-index.json 由 generate_replay_catalog.py 生成，不手改。
 - .runtime、凭据、数据库、工具依赖与编译产物不进 Git；日志只提交审查过的协议证据。
 - 代码公开不意味着私有控制站可公开免登录。
+- 许可范围以 LICENSING.md 为准；保留 NOTICE 和适用的第三方声明。
 - 提交使用 Conventional Commits；功能分支使用 feat/、fix/、docs/ 等语义前缀。
 
 ## 当前状态与下一步
