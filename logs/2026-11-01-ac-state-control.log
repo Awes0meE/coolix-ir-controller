@@ -1,0 +1,8 @@
+[2026-11-01 01:09:52] “Y‰Þpø‹‹þh&¸ÿBOOT ACStateControl; D3 idle LOW; no automatic transmission.
+[2026-11-01 01:09:54] SEND <increasing sequence> <24-bit hex state>; STATUS. 5s minimum interval.
+[2026-11-01 01:09:54] STATUS last_seq=0 D3=LOW uptime_ms=9
+[2026-11-01 01:10:02] STATUS last_seq=0 D3=LOW uptime_ms=7685
+[2026-11-01 01:10:09] TX_BEGIN seq=1 code=0xB29F50
+[2026-11-01 01:10:09] TX_DONE seq=1
+[2026-11-01 01:10:09] STATUS last_seq=1 D3=LOW uptime_ms=15100
+[2026-11-01 01:10:59] STATUS last_seq=1 D3=LOW uptime_ms=65404

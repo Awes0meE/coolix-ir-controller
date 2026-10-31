@@ -1,0 +1,110 @@
+{
+  "remote": "YORK RG94A/BGEF",
+  "timezone": "Asia/Singapore",
+  "firmware": "sketches/ACStateControl/ACStateControl.ino",
+  "waveform": "Generated nominal COOLIX timing, 38kHz setting, 30% duty setting, two frames per explicit command",
+  "serial_log": "logs/2026-11-01-ac-state-control.log",
+  "hardware_setup": "Same user-connected UNO USB/5V supply and D3 transmitter as the earlier one-shot test",
+  "trials": [
+    {
+      "sequence": 1,
+      "sent_at": "2026-11-01T01:10:09+08:00",
+      "state_id": "cool-23-low",
+      "code": "0xB29F50",
+      "requested": {
+        "mode": "cool",
+        "temperature_celsius": 23,
+        "fan": "low"
+      },
+      "serial_tx_done": true,
+      "post_send_d3": "LOW",
+      "user_observation": "User chose to capture original remote modes, fan levels, temperatures and swing positions before continuing generated-state trials.",
+      "result": "not_confirmed_user_requested_original_remote_comparison"
+    },
+    {
+      "run_id": "2026-11-01-full-control",
+      "sequence": 1,
+      "sent_at": "2026-11-01T01:34:52+08:00",
+      "kind": "generated_normal_state",
+      "serial_command": "SEND 1 B25FD0",
+      "code": "0xB25FD0",
+      "state_id": "cool-26-medium",
+      "requested": {
+        "mode": "cool",
+        "temperature_celsius": 26,
+        "fan": "medium"
+      },
+      "serial_tx_done": true,
+      "post_send_d3": "LOW",
+      "post_send_uptime_ms": 75225,
+      "serial_log": "logs/2026-11-01-ac-full-control.log",
+      "user_observation": "User confirms 26C and medium fan both match requested state",
+      "result": "user_confirmed_setpoint_and_fan",
+      "confirmed_fields": [
+        "temperature_celsius",
+        "fan"
+      ],
+      "mode_independently_observed": false
+    },
+    {
+      "run_id": "2026-11-01-full-control-reopen-013620",
+      "sequence": 3,
+      "sent_at": "2026-11-01T01:36:29+08:00",
+      "kind": "generated_normal_state",
+      "serial_command": "SEND 3 B23F40",
+      "code": "0xB23F40",
+      "state_id": "cool-24-high",
+      "requested": {
+        "mode": "cool",
+        "temperature_celsius": 24,
+        "fan": "high"
+      },
+      "serial_tx_done": true,
+      "post_send_d3": "LOW",
+      "post_send_uptime_ms": 8510,
+      "serial_log": "logs/2026-11-01-ac-full-control.log",
+      "user_observation": "User confirms 24C and high fan both match",
+      "result": "user_confirmed_setpoint_and_fan",
+      "confirmed_fields": [
+        "temperature_celsius",
+        "fan"
+      ],
+      "mode_independently_observed": false
+    },
+    {
+      "run_id": "2026-11-01-cycle24-013843",
+      "sequence": 4,
+      "started_at": "2026-11-01T01:38:51+08:00",
+      "completed_at": "2026-11-01T01:38:53+08:00",
+      "kind": "off_then_on",
+      "serial_command": "CYCLE24 4",
+      "off_code": "0xB27BE0",
+      "off_capture_id": 71,
+      "on_code": "0xB23F40",
+      "requested_on_state": {
+        "mode": "cool",
+        "temperature_celsius": 24,
+        "fan": "high"
+      },
+      "requested_gap_us": 1000000,
+      "firmware_timing": {
+        "off_end_us": 9062980,
+        "on_start_us": 10062984,
+        "reported_gap_us": 1000004,
+        "measurement": "MCU micros() around send calls; not external optical measurement"
+      },
+      "serial_tx_done": true,
+      "post_send_d3": "LOW",
+      "post_send_uptime_ms": 10252,
+      "cycle24_attempted": true,
+      "user_observation": "User confirms first off, then on; 24C and high fan both match",
+      "result": "user_confirmed_off_on_and_setpoint_fan",
+      "serial_log": "logs/2026-11-01-ac-full-control.log"
+    }
+  ],
+  "remaining_scope": [
+    "Other normal-state combinations need observations",
+    "Heating capability of this indoor unit is unknown",
+    "Special buttons and timers are outside the current normal-state catalog"
+  ]
+}

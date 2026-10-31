@@ -1,0 +1,221 @@
+{
+  "remote": "YORK RG94A/BGEF",
+  "source": "captures/york-remote-characterization.json",
+  "normal_states_catalog": "captures/york-state-catalog.json",
+  "buttons": [
+    {
+      "id": "vertical-step",
+      "user_label": "上下 Swing",
+      "press": "short",
+      "code": "0xB20FE0",
+      "frame_count": 1,
+      "capture_ids": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "annotation_status": "user_confirmed",
+      "semantics": "relative_step",
+      "user_observation": "One step per press; twelve steps return to starting position",
+      "absolute_angles_degrees": null,
+      "uno_replay_confirmed": true,
+      "uno_replay_evidence": "captures/york-full-control-run.json sequence 2"
+    },
+    {
+      "id": "horizontal-swing",
+      "user_label": "左右 Swing",
+      "press": "short",
+      "code": "0xB5F5B2",
+      "frame_count": 2,
+      "capture_ids": [
+        42,
+        43
+      ],
+      "annotation_status": "user_order_confirmed",
+      "semantics": "same_code_on_both_presses_physical_effect_pending",
+      "uno_replay_confirmed": false
+    },
+    {
+      "id": "led",
+      "user_label": "LED",
+      "press": "short",
+      "code": "0xB5F5A5",
+      "frame_count": 2,
+      "capture_ids": [
+        44,
+        45,
+        46,
+        47
+      ],
+      "annotation_status": "user_order_confirmed",
+      "semantics": "display_and_audible_feedback_state_cycle",
+      "uno_replay_confirmed": false,
+      "observed_combinations": [
+        {
+          "light": true,
+          "beep": true
+        },
+        {
+          "light": true,
+          "beep": false
+        },
+        {
+          "light": false,
+          "beep": false
+        },
+        {
+          "light": false,
+          "beep": true
+        }
+      ],
+      "cycle_order_and_length": "All four binary combinations observed; exact transition order/cycle length not yet confirmed"
+    },
+    {
+      "id": "turbo",
+      "user_label": "Turbo",
+      "press": "short",
+      "code": "0xB5F5A2",
+      "frame_count": 2,
+      "capture_ids": [
+        48,
+        49
+      ],
+      "annotation_status": "user_order_confirmed",
+      "semantics": "same_code_on_both_presses_physical_effect_pending",
+      "uno_replay_confirmed": false
+    },
+    {
+      "id": "sleep-first-sample",
+      "user_label": "Sleep Silence",
+      "press": "short",
+      "code": "0xB2E003",
+      "frame_codes": [
+        "0xB2E003",
+        "0xB2BFC0",
+        "0xB2BFC0"
+      ],
+      "frame_count": 3,
+      "capture_ids": [
+        50
+      ],
+      "annotation_status": "user_order_confirmed",
+      "semantics": "Recorded full burst; includes COOL 25C fan field 5; not a state-independent toggle",
+      "physical_sleep_on_off_state": "User confirms short press is Sleep; exact captured first/second icon state not separately reported",
+      "uno_replay_confirmed": false
+    },
+    {
+      "id": "sleep-second-sample",
+      "user_label": "Sleep Silence",
+      "press": "short",
+      "code": "0xB2BFC0",
+      "frame_codes": [
+        "0xB2BFC0",
+        "0xB2BFC0"
+      ],
+      "frame_count": 2,
+      "capture_ids": [
+        51
+      ],
+      "annotation_status": "user_order_confirmed",
+      "semantics": "Recorded full burst; includes COOL 25C fan field 5; not a state-independent toggle",
+      "physical_sleep_on_off_state": "not reported",
+      "uno_replay_confirmed": false
+    },
+    {
+      "id": "silence-first-sample",
+      "user_label": "Sleep Silence",
+      "press": "long approximately 3 seconds",
+      "code": "0xB5F5B6",
+      "frame_count": 2,
+      "capture_ids": [
+        57,
+        67
+      ],
+      "annotation_status": "user_confirmed",
+      "semantics": "silence enable, associated with appearing Silence icon in first guided long-press test",
+      "user_observation": "Silence icon appears",
+      "uno_replay_confirmed": false
+    },
+    {
+      "id": "follow-me-ion-long",
+      "user_label": "Follow Me ION",
+      "press": "long approximately 3 seconds",
+      "code": "0xB5F5A3",
+      "frame_count": 2,
+      "capture_ids": [
+        58,
+        69
+      ],
+      "annotation_status": "user_confirmed",
+      "semantics": "Same code on successive long presses; actual function and on/off state unknown; damaged capture 70 excluded",
+      "user_observation": "Long beep from air conditioner; actual function unknown",
+      "uno_replay_confirmed": false
+    },
+    {
+      "id": "silence-second-code",
+      "user_label": "Sleep Silence",
+      "press": "long approximately 3 seconds",
+      "code": "0xB5F5B7",
+      "frame_count": 2,
+      "capture_ids": [
+        66,
+        68
+      ],
+      "annotation_status": "user_confirmed",
+      "semantics": "Counterpart to B5F5B6; expected Silence disable from alternating codes and icon disappearance, per-frame UI labels not separately recorded",
+      "user_observation": "Silence icon disappears on alternating long presses",
+      "uno_replay_confirmed": false
+    },
+    {
+      "id": "power-off",
+      "user_label": "POWER",
+      "press": "short",
+      "code": "0xB27BE0",
+      "frame_count": 2,
+      "capture_ids": [
+        71
+      ],
+      "annotation_status": "user_confirmed",
+      "semantics": "power off",
+      "uno_replay_confirmed": true,
+      "uno_replay_evidence": "captures/york-full-control-run.json sequence 4: user observed off before restore"
+    },
+    {
+      "id": "power-on-sample",
+      "user_label": "POWER",
+      "press": "short",
+      "code": "0xB2BFC0",
+      "frame_count": 2,
+      "capture_ids": [
+        72
+      ],
+      "annotation_status": "user_confirmed",
+      "semantics": "power on restoring captured COOL 25C fan field 5",
+      "uno_replay_confirmed": false
+    }
+  ],
+  "pending": [
+    "Remaining button UNO replay observations",
+    "Exact LED cycle order",
+    "Actual Follow Me ION long-press function; short press had no observed output"
+  ],
+  "note": "Same command bytes do not alone prove toggle behavior or a known on/off state. Vertical long press only moved one step in user observation.",
+  "inactive_or_unobserved": [
+    {
+      "key": "Follow Me ION",
+      "press": "short",
+      "user_presses": 2,
+      "result": "No captured signal; user saw neither receiver light nor remote icon change. Not proof of hardware absence."
+    }
+  ]
+}

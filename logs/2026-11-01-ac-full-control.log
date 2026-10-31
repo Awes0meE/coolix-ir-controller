@@ -1,0 +1,29 @@
+[2026-11-01 01:33:35] ˛¨â„·y»∏ÿæ–XÖ\˝BOOT ACStateControl; D3 idle LOW; no automatic transmission.
+[2026-11-01 01:33:36] SEND <seq> <hex-state>; PRESS <seq> <button-index>; STATUS. 5s minimum interval.
+[2026-11-01 01:33:36] STATUS last_seq=0 D3=LOW uptime_ms=9 buttons=11 catalog=56e058edb903
+[2026-11-01 01:33:40] STATUS last_seq=0 D3=LOW uptime_ms=3101 buttons=11 catalog=56e058edb903
+[2026-11-01 01:34:46] STATUS last_seq=0 D3=LOW uptime_ms=69298 buttons=11 catalog=56e058edb903
+[2026-11-01 01:34:52] TX_BEGIN seq=1 code=0xB25FD0
+[2026-11-01 01:34:52] TX_DONE seq=1
+[2026-11-01 01:34:52] STATUS last_seq=1 D3=LOW uptime_ms=75225 buttons=11 catalog=56e058edb903
+[2026-11-01 01:35:12] TX_BEGIN seq=2 button=1
+[2026-11-01 01:35:12] TX_DONE seq=2
+[2026-11-01 01:35:12] STATUS last_seq=2 D3=LOW uptime_ms=95691 buttons=11 catalog=56e058edb903
+[2026-11-01 01:35:46] STATUS last_seq=2 D3=LOW uptime_ms=129634 buttons=11 catalog=56e058edb903
+[2026-11-01 01:36:20] BOOT ACStateControl; D3 idle LOW; no automatic transmission.
+[2026-11-01 01:36:20] SEND <seq> <hex-state>; PRESS <seq> <button-index>; STATUS. 5s minimum interval.
+[2026-11-01 01:36:20] STATUS last_seq=0 D3=LOW uptime_ms=9 buttons=11 catalog=56e058edb903
+[2026-11-01 01:36:22] STATUS last_seq=0 D3=LOW uptime_ms=2042 buttons=11 catalog=56e058edb903
+[2026-11-01 01:36:29] TX_BEGIN seq=3 code=0xB23F40
+[2026-11-01 01:36:29] TX_DONE seq=3
+[2026-11-01 01:36:29] STATUS last_seq=3 D3=LOW uptime_ms=8510 buttons=11 catalog=56e058edb903
+[2026-11-01 01:37:37] STATUS last_seq=3 D3=LOW uptime_ms=76702 buttons=11 catalog=56e058edb903
+[2026-11-01 01:38:41] 4∏©ëñ¿sòÇ/¯«öËÿçiüñ–BOOT ACStateControl; D3 idle LOW; no automatic transmission.
+[2026-11-01 01:38:43] SEND <seq> <hex-state>; PRESS <seq> <button-index>; CYCLE24 <seq>; STATUS.
+[2026-11-01 01:38:43] CYCLE24: off, wait 1s, on COOL/24C/high; once per boot. Other commands: 5s interval.
+[2026-11-01 01:38:43] STATUS last_seq=0 D3=LOW uptime_ms=16 buttons=11 catalog=56e058edb903 cycle24_attempted=0
+[2026-11-01 01:38:45] STATUS last_seq=0 D3=LOW uptime_ms=2482 buttons=11 catalog=56e058edb903 cycle24_attempted=0
+[2026-11-01 01:38:51] TX_BEGIN seq=4 CYCLE24 off=B27BE0 off_end_to_on_start_us=1000000 on=B23F40
+[2026-11-01 01:38:53] CYCLE24_DONE off_end_us=9062980 on_start_us=10062984 gap_us=1000004
+[2026-11-01 01:38:53] TX_DONE seq=4
+[2026-11-01 01:38:53] STATUS last_seq=4 D3=LOW uptime_ms=10252 buttons=11 catalog=56e058edb903 cycle24_attempted=1

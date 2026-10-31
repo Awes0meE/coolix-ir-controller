@@ -1,0 +1,162 @@
+{
+  "remote": "YORK RG94A/BGEF",
+  "firmware": "sketches/ACStateControl/ACStateControl.ino",
+  "fqbn": "arduino:avr:uno",
+  "build": {
+    "flash_bytes": 10994,
+    "static_ram_bytes": 297,
+    "software_regression_tests_passed": 13,
+    "firmware_hex_sha256": "4d569d0af9db08e29696714dae71451844de9145fad1986f2130632cb13f393b",
+    "captured_buttons_header_sha256": "b54a6086fd42b9be55dfcb0f8f092e5f46ff42874a84335b2e5fbef56458ef6a"
+  },
+  "upload": {
+    "verify_requested": true,
+    "exit_code": 0,
+    "port": "/dev/cu.usbserial-1130",
+    "feature": "Explicit one-pair CYCLE24 command, once per boot; other commands keep 5s spacing"
+  },
+  "boot_verified_at": "2026-11-01T01:38:45+08:00",
+  "catalog_tag": "56e058edb903",
+  "button_count": 11,
+  "initial_status": {
+    "last_seq": 0,
+    "D3": "LOW",
+    "uptime_ms": 3101
+  },
+  "serial_log": "logs/2026-11-01-ac-full-control.log",
+  "trials": [
+    {
+      "run_id": "2026-11-01-full-control",
+      "sequence": 1,
+      "sent_at": "2026-11-01T01:34:52+08:00",
+      "kind": "generated_normal_state",
+      "serial_command": "SEND 1 B25FD0",
+      "code": "0xB25FD0",
+      "state_id": "cool-26-medium",
+      "requested": {
+        "mode": "cool",
+        "temperature_celsius": 26,
+        "fan": "medium"
+      },
+      "serial_tx_done": true,
+      "post_send_d3": "LOW",
+      "post_send_uptime_ms": 75225,
+      "serial_log": "logs/2026-11-01-ac-full-control.log",
+      "user_observation": "User confirms 26C and medium fan both match requested state",
+      "result": "user_confirmed_setpoint_and_fan",
+      "confirmed_fields": [
+        "temperature_celsius",
+        "fan"
+      ],
+      "mode_independently_observed": false
+    },
+    {
+      "run_id": "2026-11-01-full-control",
+      "sequence": 2,
+      "sent_at": "2026-11-01T01:35:12+08:00",
+      "kind": "captured_button",
+      "button_id": "vertical-step",
+      "button_index": 1,
+      "serial_command": "PRESS 2 1",
+      "code": "0xB20FE0",
+      "frame_count": 1,
+      "representative_capture_id": 27,
+      "serial_tx_done": true,
+      "post_send_d3": "LOW",
+      "post_send_uptime_ms": 95691,
+      "user_observation": "User confirms exactly one louver step",
+      "result": "user_confirmed_one_step"
+    },
+    {
+      "run_id": "2026-11-01-full-control-reopen-013620",
+      "sequence": 3,
+      "sent_at": "2026-11-01T01:36:29+08:00",
+      "kind": "generated_normal_state",
+      "serial_command": "SEND 3 B23F40",
+      "code": "0xB23F40",
+      "state_id": "cool-24-high",
+      "requested": {
+        "mode": "cool",
+        "temperature_celsius": 24,
+        "fan": "high"
+      },
+      "serial_tx_done": true,
+      "post_send_d3": "LOW",
+      "post_send_uptime_ms": 8510,
+      "serial_log": "logs/2026-11-01-ac-full-control.log",
+      "user_observation": "User confirms 24C and high fan both match",
+      "result": "user_confirmed_setpoint_and_fan",
+      "confirmed_fields": [
+        "temperature_celsius",
+        "fan"
+      ],
+      "mode_independently_observed": false
+    },
+    {
+      "run_id": "2026-11-01-cycle24-013843",
+      "sequence": 4,
+      "started_at": "2026-11-01T01:38:51+08:00",
+      "completed_at": "2026-11-01T01:38:53+08:00",
+      "kind": "off_then_on",
+      "serial_command": "CYCLE24 4",
+      "off_code": "0xB27BE0",
+      "off_capture_id": 71,
+      "on_code": "0xB23F40",
+      "requested_on_state": {
+        "mode": "cool",
+        "temperature_celsius": 24,
+        "fan": "high"
+      },
+      "requested_gap_us": 1000000,
+      "firmware_timing": {
+        "off_end_us": 9062980,
+        "on_start_us": 10062984,
+        "reported_gap_us": 1000004,
+        "measurement": "MCU micros() around send calls; not external optical measurement"
+      },
+      "serial_tx_done": true,
+      "post_send_d3": "LOW",
+      "post_send_uptime_ms": 10252,
+      "cycle24_attempted": true,
+      "user_observation": "User confirms first off, then on; 24C and high fan both match",
+      "result": "user_confirmed_off_on_and_setpoint_fan",
+      "serial_log": "logs/2026-11-01-ac-full-control.log"
+    }
+  ],
+  "note": "Upload and serial status do not by themselves prove appliance response. One command per explicit trial; no automatic retries.",
+  "earlier_closed_status": {
+    "observed_at": "2026-11-01T01:35:46+08:00",
+    "last_seq": 2,
+    "D3": "LOW",
+    "uptime_ms": 129634,
+    "catalog_tag": "56e058edb903",
+    "serial_monitor_closed": true
+  },
+  "latest_status": {
+    "observed_at": "2026-11-01T01:38:53+08:00",
+    "last_seq": 4,
+    "D3": "LOW",
+    "uptime_ms": 10252,
+    "cycle24_attempted": true,
+    "catalog_tag": "56e058edb903",
+    "serial_monitor_closed": false,
+    "boot_at": "2026-11-01T01:38:43+08:00"
+  },
+  "firmware_history": [
+    {
+      "build": {
+        "flash_bytes": 10388,
+        "static_ram_bytes": 282,
+        "software_tests_passed": 13,
+        "firmware_hex_sha256": "a0cfcefdaf94cf9de5ee7ab0d3dcc24c3ef1362b137ad30094f47b9f52356357",
+        "captured_buttons_header_sha256": "1820f569aa4ba19d908cdb6ad40ca9da4dc6f2da50283d64d8ed662e66929bcc"
+      },
+      "upload": {
+        "verify_requested": true,
+        "exit_code": 0,
+        "port": "/dev/cu.usbserial-1130"
+      },
+      "boot_verified_at": "2026-11-01T01:33:40+08:00"
+    }
+  ]
+}

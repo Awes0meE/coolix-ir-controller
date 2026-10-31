@@ -1,0 +1,150 @@
+{
+  "catalog_tag": "56e058edb903",
+  "carrier_setting_khz": 38,
+  "note": "One original captured burst per PRESS; no added repeats. Check firmware catalog tag before sending. Does not imply UNO replay tested.",
+  "buttons": [
+    {
+      "index": 1,
+      "id": "vertical-step",
+      "code": "0xB20FE0",
+      "frame_count": 1,
+      "frame_codes": [
+        "0xB20FE0"
+      ],
+      "representative_capture_id": 27,
+      "duration_us": 84350,
+      "serial_command_template": "PRESS <sequence> 1"
+    },
+    {
+      "index": 2,
+      "id": "horizontal-swing",
+      "code": "0xB5F5B2",
+      "frame_count": 2,
+      "frame_codes": [
+        "0xB5F5B2",
+        "0xB5F5B2"
+      ],
+      "representative_capture_id": 42,
+      "duration_us": 173800,
+      "serial_command_template": "PRESS <sequence> 2"
+    },
+    {
+      "index": 3,
+      "id": "led",
+      "code": "0xB5F5A5",
+      "frame_count": 2,
+      "frame_codes": [
+        "0xB5F5A5",
+        "0xB5F5A5"
+      ],
+      "representative_capture_id": 44,
+      "duration_us": 173800,
+      "serial_command_template": "PRESS <sequence> 3"
+    },
+    {
+      "index": 4,
+      "id": "turbo",
+      "code": "0xB5F5A2",
+      "frame_count": 2,
+      "frame_codes": [
+        "0xB5F5A2",
+        "0xB5F5A2"
+      ],
+      "representative_capture_id": 48,
+      "duration_us": 173800,
+      "serial_command_template": "PRESS <sequence> 4"
+    },
+    {
+      "index": 5,
+      "id": "sleep-first-sample",
+      "code": "0xB2E003",
+      "frame_count": 3,
+      "frame_codes": [
+        "0xB2E003",
+        "0xB2BFC0",
+        "0xB2BFC0"
+      ],
+      "representative_capture_id": 50,
+      "duration_us": 263250,
+      "serial_command_template": "PRESS <sequence> 5"
+    },
+    {
+      "index": 6,
+      "id": "sleep-second-sample",
+      "code": "0xB2BFC0",
+      "frame_count": 2,
+      "frame_codes": [
+        "0xB2BFC0",
+        "0xB2BFC0"
+      ],
+      "representative_capture_id": 51,
+      "duration_us": 173800,
+      "serial_command_template": "PRESS <sequence> 6"
+    },
+    {
+      "index": 7,
+      "id": "silence-first-sample",
+      "code": "0xB5F5B6",
+      "frame_count": 2,
+      "frame_codes": [
+        "0xB5F5B6",
+        "0xB5F5B6"
+      ],
+      "representative_capture_id": 57,
+      "duration_us": 173800,
+      "serial_command_template": "PRESS <sequence> 7"
+    },
+    {
+      "index": 8,
+      "id": "follow-me-ion-long",
+      "code": "0xB5F5A3",
+      "frame_count": 2,
+      "frame_codes": [
+        "0xB5F5A3",
+        "0xB5F5A3"
+      ],
+      "representative_capture_id": 58,
+      "duration_us": 173800,
+      "serial_command_template": "PRESS <sequence> 8"
+    },
+    {
+      "index": 9,
+      "id": "silence-second-code",
+      "code": "0xB5F5B7",
+      "frame_count": 2,
+      "frame_codes": [
+        "0xB5F5B7",
+        "0xB5F5B7"
+      ],
+      "representative_capture_id": 66,
+      "duration_us": 173750,
+      "serial_command_template": "PRESS <sequence> 9"
+    },
+    {
+      "index": 10,
+      "id": "power-off",
+      "code": "0xB27BE0",
+      "frame_count": 2,
+      "frame_codes": [
+        "0xB27BE0",
+        "0xB27BE0"
+      ],
+      "representative_capture_id": 71,
+      "duration_us": 173850,
+      "serial_command_template": "PRESS <sequence> 10"
+    },
+    {
+      "index": 11,
+      "id": "power-on-sample",
+      "code": "0xB2BFC0",
+      "frame_count": 2,
+      "frame_codes": [
+        "0xB2BFC0",
+        "0xB2BFC0"
+      ],
+      "representative_capture_id": 72,
+      "duration_us": 173800,
+      "serial_command_template": "PRESS <sequence> 11"
+    }
+  ]
+}

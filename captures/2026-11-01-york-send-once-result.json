@@ -1,0 +1,47 @@
+{
+  "test_date": "2026-11-01",
+  "timezone": "Asia/Singapore",
+  "serial_send_time": "2026-11-01T01:05:44+08:00",
+  "board_port": "/dev/cu.usbserial-1130",
+  "firmware": "sketches/ACSendOnce/ACSendOnce.ino",
+  "firmware_sha256": "270b6fd01b64c484a3f361b116b851cf785878321feb91020a565b2b88e66f9a",
+  "firmware_flash_bytes": 3568,
+  "firmware_static_ram_bytes": 229,
+  "capture_source": "captures/2026-11-01-york-rg94a.json#capture-2",
+  "power_setup_user_reported": "3W transmitter powered by UNO 5V from Mac USB; transmitter IN=D3; no independent supply",
+  "state_hex": "0xB23FC0",
+  "target": {
+    "mode": "cool",
+    "fan": "max",
+    "setpoint_celsius": 25
+  },
+  "transmission": {
+    "carrier_setting_khz": 38,
+    "duty_setting_percent": 30,
+    "raw_duration_us": 173850,
+    "timing_count": 199,
+    "burst_count": 1,
+    "frames_inside_burst": 2,
+    "extra_repeats": 0
+  },
+  "serial_evidence": {
+    "source_log": "logs/2026-11-01-ac-send-once.log",
+    "tx_begin_count": 1,
+    "tx_done_count": 1,
+    "post_send_d3": "LOW",
+    "observed_post_send_boot_messages": 0,
+    "last_uptime_ms": 42049
+  },
+  "user_observation": {
+    "initial_setpoint_celsius": 26,
+    "beep": true,
+    "resulting_setpoint_celsius": 25,
+    "confirmation_text": "空调鸣响，设定变为 25°C"
+  },
+  "result": "One-shot capture-and-replay proof of concept succeeded, with appliance response confirmed by the user.",
+  "limits": [
+    "No supply voltage or current measurements",
+    "No sustained-load, range, or repeatability test",
+    "RAM one-shot latch resets on reboot; firmware never transmits automatically at boot"
+  ]
+}

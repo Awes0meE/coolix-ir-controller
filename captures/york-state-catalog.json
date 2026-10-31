@@ -1,0 +1,2748 @@
+{
+  "remote": "YORK RG94A/BGEF",
+  "protocol": "COOLIX-compatible normal states",
+  "state_count": 144,
+  "carrier_setting_khz": 38,
+  "status": "Generated candidate codes, not a claim that all combinations were captured or tested",
+  "validation_file": "captures/york-state-validation.json",
+  "fan_naming_note": "Internal auto follows the protocol library: field 5 is the first selectable level, called 微风 by the user; field 0 is locked in AUTO/DRY. Actual airflow is not measured.",
+  "scope": "Normal on-state temperature/mode/fan only; no timers, swing, sleep, turbo, ion, clock or follow-me",
+  "sources": [
+    "https://github.com/crankyoldgit/IRremoteESP8266/blob/master/src/ir_Coolix.h",
+    "https://github.com/crankyoldgit/IRremoteESP8266/blob/master/src/ir_Coolix.cpp",
+    "https://cdn.jseducation.se/files/pages/anva_ndarmanual-york-fja_rr_18.pdf"
+  ],
+  "states": [
+    {
+      "id": "cool-17-low",
+      "mode": "cool",
+      "temperature_celsius": 17,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F00",
+      "wire_bytes_hex": "B2 4D 9F 60 00 FF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-17-medium",
+      "mode": "cool",
+      "temperature_celsius": 17,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F00",
+      "wire_bytes_hex": "B2 4D 5F A0 00 FF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-17-high",
+      "mode": "cool",
+      "temperature_celsius": 17,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F00",
+      "wire_bytes_hex": "B2 4D 3F C0 00 FF",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 10
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-17-auto",
+      "mode": "cool",
+      "temperature_celsius": 17,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF00",
+      "wire_bytes_hex": "B2 4D BF 40 00 FF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-18-low",
+      "mode": "cool",
+      "temperature_celsius": 18,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F10",
+      "wire_bytes_hex": "B2 4D 9F 60 10 EF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-18-medium",
+      "mode": "cool",
+      "temperature_celsius": 18,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F10",
+      "wire_bytes_hex": "B2 4D 5F A0 10 EF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-18-high",
+      "mode": "cool",
+      "temperature_celsius": 18,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F10",
+      "wire_bytes_hex": "B2 4D 3F C0 10 EF",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 11
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-18-auto",
+      "mode": "cool",
+      "temperature_celsius": 18,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF10",
+      "wire_bytes_hex": "B2 4D BF 40 10 EF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-19-low",
+      "mode": "cool",
+      "temperature_celsius": 19,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F30",
+      "wire_bytes_hex": "B2 4D 9F 60 30 CF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-19-medium",
+      "mode": "cool",
+      "temperature_celsius": 19,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F30",
+      "wire_bytes_hex": "B2 4D 5F A0 30 CF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-19-high",
+      "mode": "cool",
+      "temperature_celsius": 19,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F30",
+      "wire_bytes_hex": "B2 4D 3F C0 30 CF",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 12
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-19-auto",
+      "mode": "cool",
+      "temperature_celsius": 19,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF30",
+      "wire_bytes_hex": "B2 4D BF 40 30 CF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-20-low",
+      "mode": "cool",
+      "temperature_celsius": 20,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F20",
+      "wire_bytes_hex": "B2 4D 9F 60 20 DF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-20-medium",
+      "mode": "cool",
+      "temperature_celsius": 20,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F20",
+      "wire_bytes_hex": "B2 4D 5F A0 20 DF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-20-high",
+      "mode": "cool",
+      "temperature_celsius": 20,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F20",
+      "wire_bytes_hex": "B2 4D 3F C0 20 DF",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 13
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-20-auto",
+      "mode": "cool",
+      "temperature_celsius": 20,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF20",
+      "wire_bytes_hex": "B2 4D BF 40 20 DF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-21-low",
+      "mode": "cool",
+      "temperature_celsius": 21,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F60",
+      "wire_bytes_hex": "B2 4D 9F 60 60 9F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-21-medium",
+      "mode": "cool",
+      "temperature_celsius": 21,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F60",
+      "wire_bytes_hex": "B2 4D 5F A0 60 9F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-21-high",
+      "mode": "cool",
+      "temperature_celsius": 21,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F60",
+      "wire_bytes_hex": "B2 4D 3F C0 60 9F",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 14
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-21-auto",
+      "mode": "cool",
+      "temperature_celsius": 21,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF60",
+      "wire_bytes_hex": "B2 4D BF 40 60 9F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-22-low",
+      "mode": "cool",
+      "temperature_celsius": 22,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F70",
+      "wire_bytes_hex": "B2 4D 9F 60 70 8F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-22-medium",
+      "mode": "cool",
+      "temperature_celsius": 22,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F70",
+      "wire_bytes_hex": "B2 4D 5F A0 70 8F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-22-high",
+      "mode": "cool",
+      "temperature_celsius": 22,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F70",
+      "wire_bytes_hex": "B2 4D 3F C0 70 8F",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 15
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-22-auto",
+      "mode": "cool",
+      "temperature_celsius": 22,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF70",
+      "wire_bytes_hex": "B2 4D BF 40 70 8F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-23-low",
+      "mode": "cool",
+      "temperature_celsius": 23,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F50",
+      "wire_bytes_hex": "B2 4D 9F 60 50 AF",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 7
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-23-medium",
+      "mode": "cool",
+      "temperature_celsius": 23,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F50",
+      "wire_bytes_hex": "B2 4D 5F A0 50 AF",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 8
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-23-high",
+      "mode": "cool",
+      "temperature_celsius": 23,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F50",
+      "wire_bytes_hex": "B2 4D 3F C0 50 AF",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 2
+          },
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 9
+          },
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 16
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-23-auto",
+      "mode": "cool",
+      "temperature_celsius": 23,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF50",
+      "wire_bytes_hex": "B2 4D BF 40 50 AF",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 6
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-24-low",
+      "mode": "cool",
+      "temperature_celsius": 24,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F40",
+      "wire_bytes_hex": "B2 4D 9F 60 40 BF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-24-medium",
+      "mode": "cool",
+      "temperature_celsius": 24,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F40",
+      "wire_bytes_hex": "B2 4D 5F A0 40 BF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-24-high",
+      "mode": "cool",
+      "temperature_celsius": 24,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F40",
+      "wire_bytes_hex": "B2 4D 3F C0 40 BF",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/2026-11-01-york-rg94a.json",
+            "capture_id": 1
+          },
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 17
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-24-auto",
+      "mode": "cool",
+      "temperature_celsius": 24,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF40",
+      "wire_bytes_hex": "B2 4D BF 40 40 BF",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-25-low",
+      "mode": "cool",
+      "temperature_celsius": 25,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29FC0",
+      "wire_bytes_hex": "B2 4D 9F 60 C0 3F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-25-medium",
+      "mode": "cool",
+      "temperature_celsius": 25,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25FC0",
+      "wire_bytes_hex": "B2 4D 5F A0 C0 3F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-25-high",
+      "mode": "cool",
+      "temperature_celsius": 25,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23FC0",
+      "wire_bytes_hex": "B2 4D 3F C0 C0 3F",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/2026-11-01-york-rg94a.json",
+            "capture_id": 2
+          },
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 18
+          }
+        ],
+        "raw_replay_user_confirmed": true,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-25-auto",
+      "mode": "cool",
+      "temperature_celsius": 25,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BFC0",
+      "wire_bytes_hex": "B2 4D BF 40 C0 3F",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 51
+          },
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 53
+          },
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 72
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-26-low",
+      "mode": "cool",
+      "temperature_celsius": 26,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29FD0",
+      "wire_bytes_hex": "B2 4D 9F 60 D0 2F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-26-medium",
+      "mode": "cool",
+      "temperature_celsius": 26,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25FD0",
+      "wire_bytes_hex": "B2 4D 5F A0 D0 2F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-26-high",
+      "mode": "cool",
+      "temperature_celsius": 26,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23FD0",
+      "wire_bytes_hex": "B2 4D 3F C0 D0 2F",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 19
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-26-auto",
+      "mode": "cool",
+      "temperature_celsius": 26,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BFD0",
+      "wire_bytes_hex": "B2 4D BF 40 D0 2F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-27-low",
+      "mode": "cool",
+      "temperature_celsius": 27,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F90",
+      "wire_bytes_hex": "B2 4D 9F 60 90 6F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-27-medium",
+      "mode": "cool",
+      "temperature_celsius": 27,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F90",
+      "wire_bytes_hex": "B2 4D 5F A0 90 6F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-27-high",
+      "mode": "cool",
+      "temperature_celsius": 27,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F90",
+      "wire_bytes_hex": "B2 4D 3F C0 90 6F",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 20
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-27-auto",
+      "mode": "cool",
+      "temperature_celsius": 27,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF90",
+      "wire_bytes_hex": "B2 4D BF 40 90 6F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-28-low",
+      "mode": "cool",
+      "temperature_celsius": 28,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F80",
+      "wire_bytes_hex": "B2 4D 9F 60 80 7F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-28-medium",
+      "mode": "cool",
+      "temperature_celsius": 28,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F80",
+      "wire_bytes_hex": "B2 4D 5F A0 80 7F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-28-high",
+      "mode": "cool",
+      "temperature_celsius": 28,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F80",
+      "wire_bytes_hex": "B2 4D 3F C0 80 7F",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 24
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-28-auto",
+      "mode": "cool",
+      "temperature_celsius": 28,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF80",
+      "wire_bytes_hex": "B2 4D BF 40 80 7F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-29-low",
+      "mode": "cool",
+      "temperature_celsius": 29,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29FA0",
+      "wire_bytes_hex": "B2 4D 9F 60 A0 5F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-29-medium",
+      "mode": "cool",
+      "temperature_celsius": 29,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25FA0",
+      "wire_bytes_hex": "B2 4D 5F A0 A0 5F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-29-high",
+      "mode": "cool",
+      "temperature_celsius": 29,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23FA0",
+      "wire_bytes_hex": "B2 4D 3F C0 A0 5F",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 22
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-29-auto",
+      "mode": "cool",
+      "temperature_celsius": 29,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BFA0",
+      "wire_bytes_hex": "B2 4D BF 40 A0 5F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-30-low",
+      "mode": "cool",
+      "temperature_celsius": 30,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29FB0",
+      "wire_bytes_hex": "B2 4D 9F 60 B0 4F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-30-medium",
+      "mode": "cool",
+      "temperature_celsius": 30,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25FB0",
+      "wire_bytes_hex": "B2 4D 5F A0 B0 4F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-30-high",
+      "mode": "cool",
+      "temperature_celsius": 30,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23FB0",
+      "wire_bytes_hex": "B2 4D 3F C0 B0 4F",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 23
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "cool-30-auto",
+      "mode": "cool",
+      "temperature_celsius": 30,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BFB0",
+      "wire_bytes_hex": "B2 4D BF 40 B0 4F",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "heat-17-low",
+      "mode": "heat",
+      "temperature_celsius": 17,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F0C",
+      "wire_bytes_hex": "B2 4D 9F 60 0C F3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-17-medium",
+      "mode": "heat",
+      "temperature_celsius": 17,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F0C",
+      "wire_bytes_hex": "B2 4D 5F A0 0C F3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-17-high",
+      "mode": "heat",
+      "temperature_celsius": 17,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F0C",
+      "wire_bytes_hex": "B2 4D 3F C0 0C F3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-17-auto",
+      "mode": "heat",
+      "temperature_celsius": 17,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF0C",
+      "wire_bytes_hex": "B2 4D BF 40 0C F3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-18-low",
+      "mode": "heat",
+      "temperature_celsius": 18,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F1C",
+      "wire_bytes_hex": "B2 4D 9F 60 1C E3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-18-medium",
+      "mode": "heat",
+      "temperature_celsius": 18,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F1C",
+      "wire_bytes_hex": "B2 4D 5F A0 1C E3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-18-high",
+      "mode": "heat",
+      "temperature_celsius": 18,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F1C",
+      "wire_bytes_hex": "B2 4D 3F C0 1C E3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-18-auto",
+      "mode": "heat",
+      "temperature_celsius": 18,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF1C",
+      "wire_bytes_hex": "B2 4D BF 40 1C E3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-19-low",
+      "mode": "heat",
+      "temperature_celsius": 19,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F3C",
+      "wire_bytes_hex": "B2 4D 9F 60 3C C3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-19-medium",
+      "mode": "heat",
+      "temperature_celsius": 19,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F3C",
+      "wire_bytes_hex": "B2 4D 5F A0 3C C3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-19-high",
+      "mode": "heat",
+      "temperature_celsius": 19,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F3C",
+      "wire_bytes_hex": "B2 4D 3F C0 3C C3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-19-auto",
+      "mode": "heat",
+      "temperature_celsius": 19,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF3C",
+      "wire_bytes_hex": "B2 4D BF 40 3C C3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-20-low",
+      "mode": "heat",
+      "temperature_celsius": 20,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F2C",
+      "wire_bytes_hex": "B2 4D 9F 60 2C D3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-20-medium",
+      "mode": "heat",
+      "temperature_celsius": 20,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F2C",
+      "wire_bytes_hex": "B2 4D 5F A0 2C D3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-20-high",
+      "mode": "heat",
+      "temperature_celsius": 20,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F2C",
+      "wire_bytes_hex": "B2 4D 3F C0 2C D3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-20-auto",
+      "mode": "heat",
+      "temperature_celsius": 20,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF2C",
+      "wire_bytes_hex": "B2 4D BF 40 2C D3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-21-low",
+      "mode": "heat",
+      "temperature_celsius": 21,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F6C",
+      "wire_bytes_hex": "B2 4D 9F 60 6C 93",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-21-medium",
+      "mode": "heat",
+      "temperature_celsius": 21,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F6C",
+      "wire_bytes_hex": "B2 4D 5F A0 6C 93",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-21-high",
+      "mode": "heat",
+      "temperature_celsius": 21,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F6C",
+      "wire_bytes_hex": "B2 4D 3F C0 6C 93",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-21-auto",
+      "mode": "heat",
+      "temperature_celsius": 21,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF6C",
+      "wire_bytes_hex": "B2 4D BF 40 6C 93",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-22-low",
+      "mode": "heat",
+      "temperature_celsius": 22,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F7C",
+      "wire_bytes_hex": "B2 4D 9F 60 7C 83",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-22-medium",
+      "mode": "heat",
+      "temperature_celsius": 22,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F7C",
+      "wire_bytes_hex": "B2 4D 5F A0 7C 83",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-22-high",
+      "mode": "heat",
+      "temperature_celsius": 22,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F7C",
+      "wire_bytes_hex": "B2 4D 3F C0 7C 83",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-22-auto",
+      "mode": "heat",
+      "temperature_celsius": 22,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF7C",
+      "wire_bytes_hex": "B2 4D BF 40 7C 83",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-23-low",
+      "mode": "heat",
+      "temperature_celsius": 23,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F5C",
+      "wire_bytes_hex": "B2 4D 9F 60 5C A3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-23-medium",
+      "mode": "heat",
+      "temperature_celsius": 23,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F5C",
+      "wire_bytes_hex": "B2 4D 5F A0 5C A3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-23-high",
+      "mode": "heat",
+      "temperature_celsius": 23,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F5C",
+      "wire_bytes_hex": "B2 4D 3F C0 5C A3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-23-auto",
+      "mode": "heat",
+      "temperature_celsius": 23,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF5C",
+      "wire_bytes_hex": "B2 4D BF 40 5C A3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-24-low",
+      "mode": "heat",
+      "temperature_celsius": 24,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F4C",
+      "wire_bytes_hex": "B2 4D 9F 60 4C B3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-24-medium",
+      "mode": "heat",
+      "temperature_celsius": 24,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F4C",
+      "wire_bytes_hex": "B2 4D 5F A0 4C B3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-24-high",
+      "mode": "heat",
+      "temperature_celsius": 24,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F4C",
+      "wire_bytes_hex": "B2 4D 3F C0 4C B3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-24-auto",
+      "mode": "heat",
+      "temperature_celsius": 24,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF4C",
+      "wire_bytes_hex": "B2 4D BF 40 4C B3",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-25-low",
+      "mode": "heat",
+      "temperature_celsius": 25,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29FCC",
+      "wire_bytes_hex": "B2 4D 9F 60 CC 33",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-25-medium",
+      "mode": "heat",
+      "temperature_celsius": 25,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25FCC",
+      "wire_bytes_hex": "B2 4D 5F A0 CC 33",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-25-high",
+      "mode": "heat",
+      "temperature_celsius": 25,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23FCC",
+      "wire_bytes_hex": "B2 4D 3F C0 CC 33",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-25-auto",
+      "mode": "heat",
+      "temperature_celsius": 25,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BFCC",
+      "wire_bytes_hex": "B2 4D BF 40 CC 33",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-26-low",
+      "mode": "heat",
+      "temperature_celsius": 26,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29FDC",
+      "wire_bytes_hex": "B2 4D 9F 60 DC 23",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-26-medium",
+      "mode": "heat",
+      "temperature_celsius": 26,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25FDC",
+      "wire_bytes_hex": "B2 4D 5F A0 DC 23",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-26-high",
+      "mode": "heat",
+      "temperature_celsius": 26,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23FDC",
+      "wire_bytes_hex": "B2 4D 3F C0 DC 23",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-26-auto",
+      "mode": "heat",
+      "temperature_celsius": 26,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BFDC",
+      "wire_bytes_hex": "B2 4D BF 40 DC 23",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-27-low",
+      "mode": "heat",
+      "temperature_celsius": 27,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F9C",
+      "wire_bytes_hex": "B2 4D 9F 60 9C 63",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-27-medium",
+      "mode": "heat",
+      "temperature_celsius": 27,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F9C",
+      "wire_bytes_hex": "B2 4D 5F A0 9C 63",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-27-high",
+      "mode": "heat",
+      "temperature_celsius": 27,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F9C",
+      "wire_bytes_hex": "B2 4D 3F C0 9C 63",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-27-auto",
+      "mode": "heat",
+      "temperature_celsius": 27,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF9C",
+      "wire_bytes_hex": "B2 4D BF 40 9C 63",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-28-low",
+      "mode": "heat",
+      "temperature_celsius": 28,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29F8C",
+      "wire_bytes_hex": "B2 4D 9F 60 8C 73",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-28-medium",
+      "mode": "heat",
+      "temperature_celsius": 28,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25F8C",
+      "wire_bytes_hex": "B2 4D 5F A0 8C 73",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-28-high",
+      "mode": "heat",
+      "temperature_celsius": 28,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23F8C",
+      "wire_bytes_hex": "B2 4D 3F C0 8C 73",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 26
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-28-auto",
+      "mode": "heat",
+      "temperature_celsius": 28,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BF8C",
+      "wire_bytes_hex": "B2 4D BF 40 8C 73",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-29-low",
+      "mode": "heat",
+      "temperature_celsius": 29,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29FAC",
+      "wire_bytes_hex": "B2 4D 9F 60 AC 53",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-29-medium",
+      "mode": "heat",
+      "temperature_celsius": 29,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25FAC",
+      "wire_bytes_hex": "B2 4D 5F A0 AC 53",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-29-high",
+      "mode": "heat",
+      "temperature_celsius": 29,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23FAC",
+      "wire_bytes_hex": "B2 4D 3F C0 AC 53",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-29-auto",
+      "mode": "heat",
+      "temperature_celsius": 29,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BFAC",
+      "wire_bytes_hex": "B2 4D BF 40 AC 53",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-30-low",
+      "mode": "heat",
+      "temperature_celsius": 30,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29FBC",
+      "wire_bytes_hex": "B2 4D 9F 60 BC 43",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-30-medium",
+      "mode": "heat",
+      "temperature_celsius": 30,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25FBC",
+      "wire_bytes_hex": "B2 4D 5F A0 BC 43",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-30-high",
+      "mode": "heat",
+      "temperature_celsius": 30,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23FBC",
+      "wire_bytes_hex": "B2 4D 3F C0 BC 43",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "heat-30-auto",
+      "mode": "heat",
+      "temperature_celsius": 30,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BFBC",
+      "wire_bytes_hex": "B2 4D BF 40 BC 43",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": "unknown"
+    },
+    {
+      "id": "dry-17-auto",
+      "mode": "dry",
+      "temperature_celsius": 17,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F04",
+      "wire_bytes_hex": "B2 4D 1F E0 04 FB",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-18-auto",
+      "mode": "dry",
+      "temperature_celsius": 18,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F14",
+      "wire_bytes_hex": "B2 4D 1F E0 14 EB",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-19-auto",
+      "mode": "dry",
+      "temperature_celsius": 19,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F34",
+      "wire_bytes_hex": "B2 4D 1F E0 34 CB",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-20-auto",
+      "mode": "dry",
+      "temperature_celsius": 20,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F24",
+      "wire_bytes_hex": "B2 4D 1F E0 24 DB",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-21-auto",
+      "mode": "dry",
+      "temperature_celsius": 21,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F64",
+      "wire_bytes_hex": "B2 4D 1F E0 64 9B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-22-auto",
+      "mode": "dry",
+      "temperature_celsius": 22,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F74",
+      "wire_bytes_hex": "B2 4D 1F E0 74 8B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-23-auto",
+      "mode": "dry",
+      "temperature_celsius": 23,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F54",
+      "wire_bytes_hex": "B2 4D 1F E0 54 AB",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 3
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-24-auto",
+      "mode": "dry",
+      "temperature_celsius": 24,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F44",
+      "wire_bytes_hex": "B2 4D 1F E0 44 BB",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-25-auto",
+      "mode": "dry",
+      "temperature_celsius": 25,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21FC4",
+      "wire_bytes_hex": "B2 4D 1F E0 C4 3B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-26-auto",
+      "mode": "dry",
+      "temperature_celsius": 26,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21FD4",
+      "wire_bytes_hex": "B2 4D 1F E0 D4 2B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-27-auto",
+      "mode": "dry",
+      "temperature_celsius": 27,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F94",
+      "wire_bytes_hex": "B2 4D 1F E0 94 6B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-28-auto",
+      "mode": "dry",
+      "temperature_celsius": 28,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F84",
+      "wire_bytes_hex": "B2 4D 1F E0 84 7B",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 25
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-29-auto",
+      "mode": "dry",
+      "temperature_celsius": 29,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21FA4",
+      "wire_bytes_hex": "B2 4D 1F E0 A4 5B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "dry-30-auto",
+      "mode": "dry",
+      "temperature_celsius": 30,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21FB4",
+      "wire_bytes_hex": "B2 4D 1F E0 B4 4B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-17-auto",
+      "mode": "auto",
+      "temperature_celsius": 17,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F08",
+      "wire_bytes_hex": "B2 4D 1F E0 08 F7",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-18-auto",
+      "mode": "auto",
+      "temperature_celsius": 18,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F18",
+      "wire_bytes_hex": "B2 4D 1F E0 18 E7",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-19-auto",
+      "mode": "auto",
+      "temperature_celsius": 19,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F38",
+      "wire_bytes_hex": "B2 4D 1F E0 38 C7",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-20-auto",
+      "mode": "auto",
+      "temperature_celsius": 20,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F28",
+      "wire_bytes_hex": "B2 4D 1F E0 28 D7",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-21-auto",
+      "mode": "auto",
+      "temperature_celsius": 21,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F68",
+      "wire_bytes_hex": "B2 4D 1F E0 68 97",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-22-auto",
+      "mode": "auto",
+      "temperature_celsius": 22,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F78",
+      "wire_bytes_hex": "B2 4D 1F E0 78 87",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-23-auto",
+      "mode": "auto",
+      "temperature_celsius": 23,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F58",
+      "wire_bytes_hex": "B2 4D 1F E0 58 A7",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 1
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-24-auto",
+      "mode": "auto",
+      "temperature_celsius": 24,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F48",
+      "wire_bytes_hex": "B2 4D 1F E0 48 B7",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-25-auto",
+      "mode": "auto",
+      "temperature_celsius": 25,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21FC8",
+      "wire_bytes_hex": "B2 4D 1F E0 C8 37",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-26-auto",
+      "mode": "auto",
+      "temperature_celsius": 26,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21FD8",
+      "wire_bytes_hex": "B2 4D 1F E0 D8 27",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-27-auto",
+      "mode": "auto",
+      "temperature_celsius": 27,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F98",
+      "wire_bytes_hex": "B2 4D 1F E0 98 67",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-28-auto",
+      "mode": "auto",
+      "temperature_celsius": 28,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21F88",
+      "wire_bytes_hex": "B2 4D 1F E0 88 77",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-29-auto",
+      "mode": "auto",
+      "temperature_celsius": 29,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21FA8",
+      "wire_bytes_hex": "B2 4D 1F E0 A8 57",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "auto-30-auto",
+      "mode": "auto",
+      "temperature_celsius": 30,
+      "fan": "auto",
+      "fan_field": 0,
+      "user_fan_label_zh": "模式锁定，不可调",
+      "manual_fan_adjustable": false,
+      "code": "0xB21FB8",
+      "wire_bytes_hex": "B2 4D 1F E0 B8 47",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "fan-none-low",
+      "mode": "fan",
+      "temperature_celsius": null,
+      "fan": "low",
+      "fan_field": 4,
+      "user_fan_label_zh": "低",
+      "manual_fan_adjustable": true,
+      "code": "0xB29FE4",
+      "wire_bytes_hex": "B2 4D 9F 60 E4 1B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "fan-none-medium",
+      "mode": "fan",
+      "temperature_celsius": null,
+      "fan": "medium",
+      "fan_field": 2,
+      "user_fan_label_zh": "中",
+      "manual_fan_adjustable": true,
+      "code": "0xB25FE4",
+      "wire_bytes_hex": "B2 4D 5F A0 E4 1B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "fan-none-high",
+      "mode": "fan",
+      "temperature_celsius": null,
+      "fan": "high",
+      "fan_field": 1,
+      "user_fan_label_zh": "高",
+      "manual_fan_adjustable": true,
+      "code": "0xB23FE4",
+      "wire_bytes_hex": "B2 4D 3F C0 E4 1B",
+      "evidence": {
+        "remote_capture": true,
+        "remote_capture_references": [
+          {
+            "file": "captures/york-remote-characterization.json",
+            "capture_id": 5
+          }
+        ],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    },
+    {
+      "id": "fan-none-auto",
+      "mode": "fan",
+      "temperature_celsius": null,
+      "fan": "auto",
+      "fan_field": 5,
+      "user_fan_label_zh": "微风（用户称呼）",
+      "manual_fan_adjustable": true,
+      "code": "0xB2BFE4",
+      "wire_bytes_hex": "B2 4D BF 40 E4 1B",
+      "evidence": {
+        "remote_capture": false,
+        "remote_capture_references": [],
+        "raw_replay_user_confirmed": false,
+        "generated_waveform_validation": "See captures/york-state-validation.json"
+      },
+      "appliance_heat_support": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+.DS_Store
+.arduino/
+.tools/
+build/
+__pycache__/
+*.py[cod]
+.venv/
+.runtime/
+.pytest_cache/
+artifacts/
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.sqlite3-*
+*.pem
+credentials.json
+access-code.txt
+tunnel-token
+# New operational logs stay local; only the reviewed protocol fixtures are public.
+logs/*
+!logs/2026-11-01-ac-capture.log
+!logs/2026-11-01-ac-full-control.log
+!logs/2026-11-01-ac-send-once.log
+!logs/2026-11-01-ac-state-control.log
+!logs/2026-11-01-remote-characterization.log
+captures/controller-web-validation.json
