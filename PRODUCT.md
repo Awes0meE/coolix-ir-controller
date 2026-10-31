@@ -26,7 +26,7 @@ UNO R3 compatible board, receiver D2 and transmitter D3. The Mac must remain awa
 - Vertical swing is relative stepping, 12 steps per user observation; absolute angle unknown.
 - LED cycles display/audible combinations; order unknown. Follow Me short press has no observed output; long press has a captured command, purpose unknown.
 - Sleep samples include COOL 25°C and fan field 5. UI must disclose this before sending. Heating support is unverified.
-- Ordinary firmware commands require 5 seconds between transmissions. No automatic retries on ambiguous transmit outcomes.
+- Ordinary firmware commands require 2 seconds between transmissions. No automatic retries on ambiguous transmit outcomes.
 
 ## Evidence on Hand
 

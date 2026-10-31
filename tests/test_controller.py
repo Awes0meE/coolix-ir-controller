@@ -5,7 +5,7 @@ import uuid
 import pytest
 from fastapi.testclient import TestClient
 
-from controller.core import Controller, ControlError
+from controller.core import Controller, ControlError, SerialBoard
 from controller.server import create_app
 
 ORIGIN = 'http://127.0.0.1:8768'
@@ -121,3 +121,35 @@ def test_login_throttle_and_logout(setup):
         assert client.post('/api/login', json={'code': 'wrong'}).status_code == 401
     assert client.post('/api/login', json={'code': 'wrong'}).status_code == 429
     assert not board.calls
+
+
+@pytest.mark.parametrize('uncertain', [False, True])
+def test_two_second_send_boundary_and_durable_duplicate(tmp_path, monkeypatch, uncertain):
+    stamp = [100.0]
+    monkeypatch.setattr('controller.core.time.monotonic', lambda: stamp[0])
+    board = FakeBoard()
+    controller = Controller(tmp_path, board)
+    first_id = str(uuid.uuid4())
+    if uncertain:
+        board.error = ControlError('lost receipt', 503, uncertain=True)
+    first = controller.execute(first_id, TARGET)
+    assert first['status'] == ('unknown' if uncertain else 'sent')
+    assert controller.state()['cooldown_ms'] == 2000
+    board.error = None
+    stamp[0] = 101.999
+    with pytest.raises(ControlError) as exc:
+        controller.execute(str(uuid.uuid4()), TARGET)
+    assert exc.value.status == 429
+    assert len(board.calls) == 1
+    stamp[0] = 102.0
+    assert controller.execute(str(uuid.uuid4()), TARGET)['status'] == 'sent'
+    assert controller.execute(first_id, TARGET) == first
+    assert len(board.calls) == 2
+
+
+def test_status_reports_firmware_interval_without_transmitting():
+    board = SerialBoard('', 'test-catalog')
+    assert board._status_line('STATUS last_seq=0 D3=LOW uptime_ms=10 catalog=test-catalog min_interval_ms=2000')
+    assert board.info['min_interval_ms'] == 2000
+    assert board._status_line('STATUS last_seq=0 D3=LOW uptime_ms=10 catalog=test-catalog')
+    assert board.info['min_interval_ms'] is None

@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from coolix_states import encode
 
+COMMAND_INTERVAL_SECONDS = 2.0
+
 
 class ControlError(Exception):
     def __init__(self, message, status=409, uncertain=False):
@@ -40,7 +42,9 @@ class SerialBoard:
             raise ControlError('UNO 按键目录与服务不一致，请重新上传对应程序。', 503)
         self.info = {'online': True, 'last_seq': int(fields.get('last_seq', '0')),
                      'uptime_ms': int(fields.get('uptime_ms', '0')),
-                     'catalog': fields['catalog'], 'd3': fields.get('D3'), 'error': None}
+                     'catalog': fields['catalog'], 'd3': fields.get('D3'),
+                     'min_interval_ms': int(fields['min_interval_ms']) if 'min_interval_ms' in fields else None,
+                     'error': None}
         return True
 
     def _read(self):
@@ -249,13 +253,13 @@ class Controller:
                 previous.update(last_sent_at=now(), confidence='sent', last_action=label)
                 result = {'status': 'sent', 'message': '指令已发送', 'label': label, 'sequence': sequence, 'state': previous}
                 status = 'sent'
-                self.cooldown_until = time.monotonic() + 5.2
+                self.cooldown_until = time.monotonic() + COMMAND_INTERVAL_SECONDS
             except ControlError as exc:
                 status = 'unknown' if exc.uncertain else 'failed'
                 result = {'status': status, 'message': str(exc), 'label': label, 'sequence': sequence}
                 if exc.uncertain:
                     previous['confidence'] = 'unknown'
-                self.cooldown_until = time.monotonic() + 5.2
+                self.cooldown_until = time.monotonic() + COMMAND_INTERVAL_SECONDS
             with self.db() as db:
                 db.execute('UPDATE commands SET status=?,response=? WHERE id=?', (status, json.dumps(result, ensure_ascii=False), request_id))
                 db.execute("UPDATE meta SET value=? WHERE key='state'", (json.dumps(previous, ensure_ascii=False),))

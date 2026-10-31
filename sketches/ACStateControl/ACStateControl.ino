@@ -12,7 +12,7 @@
 uint32_t lastSequence = 0;
 uint32_t lastSentAt = 0;
 bool cycle24Attempted = false;
-constexpr uint32_t MIN_INTERVAL_MS = 5000;
+constexpr uint32_t MIN_INTERVAL_MS = 2000;
 char command[40];
 uint8_t commandLength = 0;
 bool commandOverflow = false;
@@ -71,6 +71,8 @@ void printStatus() {
     Serial.print(kCapturedButtonCount);
     Serial.print(F(" catalog="));
     Serial.print(F(BUTTON_CATALOG_TAG));
+    Serial.print(F(" min_interval_ms="));
+    Serial.print(MIN_INTERVAL_MS);
     Serial.print(F(" cycle24_attempted="));
     Serial.println(cycle24Attempted ? 1 : 0);
 }
@@ -125,7 +127,7 @@ void handleCommand() {
     } else if (captured) {
         sendCapturedButton(buttonIndex);
     } else {
-        // One explicitly requested pair; ordinary commands retain their 5s limit.
+        // One explicitly requested pair; ordinary commands retain their 2s limit.
         // No serial writes or host round trips between the off burst and on burst.
         sendCapturedButton(BUTTON_INDEX_POWER_OFF);
         const uint32_t offEndMicros = micros();
@@ -152,7 +154,7 @@ void setup() {
     Serial.begin(115200);
     Serial.println(F("BOOT ACStateControl; D3 idle LOW; no automatic transmission."));
     Serial.println(F("SEND <seq> <hex-state>; PRESS <seq> <button-index>; CYCLE24 <seq>; STATUS."));
-    Serial.println(F("CYCLE24: off, wait 1s, on COOL/24C/high; once per boot. Other commands: 5s interval."));
+    Serial.println(F("CYCLE24: off, wait 1s, on COOL/24C/high; once per boot. Other commands: 2s interval."));
     printStatus();
 }
 
