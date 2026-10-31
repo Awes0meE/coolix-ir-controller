@@ -26,6 +26,9 @@ UNO R3 compatible board, receiver D2 and transmitter D3. The Mac must remain awa
 - Vertical swing is relative stepping, 12 steps per user observation; absolute angle unknown.
 - LED cycles display/audible combinations; order unknown. Follow Me short press has no observed output; long press has a captured command, purpose unknown.
 - Sleep samples include COOL 25°C and fan field 5. UI must disclose this before sending. Heating support is unverified.
+- One-shot on/off timers use either a countdown or a phone-local date/time. The Mac stores and runs tasks after the browser closes.
+- One-tap precooling sends COOL 24°C/high immediately, then DRY 24°C/auto after 10 minutes. Dry mode continues until another control action. Manual control or a due timer cancels the remaining precooling stage; cancelling alone does not power off.
+- Missed timers and uncertain transmissions are not replayed. Future tasks survive service restart, but the Mac must remain awake with the UNO connected.
 - Ordinary firmware commands require 2 seconds between transmissions. No automatic retries on ambiguous transmit outcomes.
 
 ## Evidence on Hand

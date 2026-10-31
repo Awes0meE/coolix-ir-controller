@@ -10,14 +10,15 @@
 - README 是安装入口；docs/COOLIX状态编码.md 是协议解释；docs/验证范围.md 是验证边界。
 - 配置示例为 .env.example，实际配置在被忽略的 .runtime/controller/service.env。
 - `sh controller/run.sh` 启动 127.0.0.1:8768；需要实际 IR_SERIAL_PORT。
-- `.venv/bin/python -m pytest -q tests`；`node --check controller/static/app.js`。
+- 测试按 README 使用隔离 `IR_DATA_DIR` 运行 `.venv/bin/python -m pytest -q tests`；`node --check controller/static/app.js`。
 - `sh scripts/arduino.sh compile --fqbn arduino:avr:uno sketches/ACStateControl` 只编译。
 - `.venv/bin/python scripts/check_public_tree.py` 检查公开文件与本地文档链接。
 
 ## 必须保持的边界
 
 - 启动、刷新、后台 STATUS 查询和软件测试不发红外；用户明确创建的定时任务与预制冷阶段可按计划执行，实物控制必须在用户授权范围内。
-- 定时任务持久化在原数据库；启动时不补发到期任务，运行中错过超过 30 秒不补发，结果不明不重试。
+- 新接口为 `POST /api/schedules` 和 `POST /api/schedules/{id}/cancel`，沿用登录、Origin 和 CSRF 校验；任务与服务器时间通过 `GET /api/state` 返回。完整接口、数据模型和调度流程见 docs/手机控制网页与迁移.md。
+- 原数据库保留 `meta`、`commands`、`sessions`，新增 `schedules`；定时任务持久化在原数据库；启动时不补发到期任务，运行中错过超过 30 秒不补发，结果不明不重试。
 - 手动控制或定时开关机接管前取消后续预制冷阶段；取消任务本身不发送红外。
 - Web 服务独占串口；上传前停服务，监视器与服务不可同时打开。
 - TX_DONE 不是空调实际反馈；不把原遥控器状态或绝对扇叶角度猜成已知。

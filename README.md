@@ -38,7 +38,7 @@ flowchart LR
 
 目标硬件是经典 **UNO / UNO R3**，不是 UNO R4。使用 1838B 接收模块及带 MOS 驱动、限流的 940nm 发射模块。先按[硬件接线](docs/硬件与采集.md)连接。
 
-已验证环境：macOS arm64、Python 3.9、Arduino CLI 1.5.1、AVR core 1.8.8、IRremote 4.7.1。CI 另检查 Python 3.11 和 UNO 编译。
+已验证环境：macOS arm64、Python 3.11、Arduino CLI 1.5.1、AVR core 1.8.8、IRremote 4.7.1。CI 检查 Python 3.11 和 UNO 编译。
 
 ### 1. 获取源码和工具
 
@@ -47,8 +47,8 @@ git clone https://github.com/Awes0meE/coolix-ir-controller.git
 cd coolix-ir-controller
 
 # 已安装 Homebrew 的 Mac
-brew install python arduino-cli
-python3 -m venv .venv
+brew install python@3.11 arduino-cli
+python3.11 -m venv .venv
 .venv/bin/python -m pip install -r controller/requirements.lock.txt
 
 sh scripts/arduino.sh core update-index
@@ -97,14 +97,19 @@ cat .runtime/controller/access-code.txt
 ## 开发和验证
 
 ```sh
-.venv/bin/python -m pytest -q tests
+# 首次导入服务模块也只写入临时数据目录
+(
+  test_data=$(mktemp -d)
+  trap 'rm -rf "$test_data"' EXIT
+  IR_DATA_DIR="$test_data" IR_SERIAL_PORT= .venv/bin/python -m pytest -q tests
+)
 node --check controller/static/app.js  # Node 仅用于语法检查，运行网页不依赖 Node
 .venv/bin/python scripts/generate_replay_catalog.py
 git diff --exit-code -- sketches/ACStateControl/CapturedButtons.h captures/york-replay-index.json
 .venv/bin/python scripts/check_public_tree.py
 ```
 
-目前 53 项测试覆盖协议映射、异常采集、原始帧数、鉴权、模式限制、防重发和中断恢复。测试用假串口，**不会控制真实空调**。实物确认与软件测试分开记录；当前控制固件编译为 Flash 11034 bytes、静态 RAM 297 bytes。
+2026-11-01 验证：53 项测试覆盖协议映射、异常采集、原始帧数、鉴权、模式限制、防重发和中断恢复。测试用假串口，**不会控制真实空调**。实物确认与软件测试分开记录；当前控制固件编译为 Flash 11034 bytes、静态 RAM 297 bytes。
 
 ## 项目地图
 
