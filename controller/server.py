@@ -15,6 +15,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from .core import ROOT, Controller, ControlError, SerialBoard
+from .scheduler import Scheduler
 
 COOKIE = 'ir_controller_session'
 
@@ -28,6 +29,7 @@ def create_app(data_dir=None, board=None, access_code=None, monitor=True):
     index = json.loads((ROOT / 'captures/york-replay-index.json').read_text())
     board = board or SerialBoard(os.environ.get('IR_SERIAL_PORT', ''), index['catalog_tag'])
     controller = Controller(data_dir, board)
+    scheduler = Scheduler(controller)
     credentials = data_dir / 'credentials.json'
     if not credentials.exists():
         code = access_code or '-'.join(''.join(secrets.choice('23456789ABCDEFGHJKLMNPQRSTUVWXYZ') for _ in range(4)) for _ in range(3))
@@ -48,21 +50,34 @@ def create_app(data_dir=None, board=None, access_code=None, monitor=True):
             board.status()
             stop.wait(4)
 
+    def run_timers():
+        import logging
+        while not stop.wait(1):
+            try:
+                scheduler.tick()
+            except Exception:
+                logging.getLogger(__name__).error('Timer worker failed; claimed tasks will not be replayed')
+
     @asynccontextmanager
     async def lifespan(app):
-        worker = None
+        worker = timer_worker = None
         if monitor:
             worker = threading.Thread(target=watch, daemon=True, name='ir-board-status')
             worker.start()
+            timer_worker = threading.Thread(target=run_timers, daemon=True, name='ir-timers')
+            timer_worker.start()
         yield
         stop.set()
         if worker:
             worker.join(timeout=5)
+        if timer_worker:
+            timer_worker.join(timeout=10)
         if hasattr(board, '_close'):
             board._close('服务已停止')
 
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
     app.state.controller = controller
+    app.state.scheduler = scheduler
     app.state.origins = origins
 
     @app.middleware('http')
@@ -159,7 +174,7 @@ def create_app(data_dir=None, board=None, access_code=None, monitor=True):
     @app.get('/api/state')
     def state(request: Request):
         session(request)
-        return controller.state()
+        return {**controller.state(), 'schedules': scheduler.list(), 'server_time': time.time()}
 
     @app.post('/api/command')
     async def command(request: Request):
@@ -171,7 +186,22 @@ def create_app(data_dir=None, board=None, access_code=None, monitor=True):
         if not isinstance(body, dict):
             raise ControlError('请求格式不正确。', 400)
         import asyncio
-        return await asyncio.to_thread(controller.execute, request.headers.get('x-request-id', ''), body)
+        return await asyncio.to_thread(scheduler.manual, request.headers.get('x-request-id', ''), body)
+
+    @app.post('/api/schedules')
+    async def create_schedule(request: Request):
+        session(request, True)
+        try:
+            body = await request.json()
+        except Exception:
+            raise ControlError('请求格式不正确。', 400)
+        import asyncio
+        return await asyncio.to_thread(scheduler.create, request.headers.get('x-request-id', ''), body)
+
+    @app.post('/api/schedules/{job_id}/cancel')
+    def cancel_schedule(job_id: str, request: Request):
+        session(request, True)
+        return scheduler.cancel(job_id)
 
     app.mount('/static', StaticFiles(directory=ROOT / 'controller/static'), name='static')
     return app

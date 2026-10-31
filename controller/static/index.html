@@ -40,6 +40,10 @@
 
     <main id="app-screen" hidden>
       <div class="device-heading"><div><h1>我的空调<span class="device-brand">YORK</span></h1><p>把温度，调到刚刚好。</p></div><button id="power" class="power-button" aria-label="开关空调" disabled><svg><use href="#i-power"/></svg><span id="power-label">开机</span></button></div>
+      <section class="precool-panel" aria-labelledby="precool-heading">
+        <div class="precool-copy"><span class="eyebrow">回家之前</span><h2 id="precool-heading">先让屋里凉下来</h2><p>立即制冷 24°C · 大风，10 分钟后切换除湿 24°C · 自动风量。</p><p class="routine-note">切换后持续除湿，直到你另行调整或关机。</p></div>
+        <div class="precool-actions"><button id="precool-start" class="primary" disabled><svg><use href="#i-cool"/></svg>一键预制冷</button><p id="precool-status" role="status">关闭网页后，服务器会继续计时。</p><button id="precool-cancel" class="text-button" hidden>取消后续切换</button></div>
+      </section>
       <div class="workspace">
         <section class="climate-panel" aria-label="温度模式与风量">
           <div class="panel-top"><span id="mode-summary"><svg><use href="#i-cool"/></svg>制冷模式</span><span id="draft-badge" class="draft-badge">目标设定</span></div>
@@ -61,6 +65,19 @@
 
         <div class="secondary-column">
           <section class="sent-status" aria-labelledby="sent-heading"><div class="group-title"><h2 id="sent-heading">已发送的设定</h2><span id="sent-time">尚未发送</span></div><p id="sent-summary">等待第一次操作</p><div class="status-chips"><span id="sent-power">开关未知</span><span id="sent-silence">Silence 未知</span></div><p class="state-disclaimer">单向红外无状态回传。使用原遥控器后，页面可能与空调不同步。</p></section>
+          <section class="timer-panel" aria-labelledby="timer-heading">
+            <div class="group-title"><h2 id="timer-heading">定时开关机</h2><span>一次性定时</span></div>
+            <form id="timer-form">
+              <div class="timer-fields"><label>到点执行<select id="timer-action"><option value="off">关机</option><option value="on">开机</option></select></label><label>计时方式<select id="timer-type"><option value="delay">倒计时</option><option value="at">指定时间</option></select></label></div>
+              <label id="timer-delay-field">多少分钟后<input id="timer-minutes" type="number" min="1" max="43200" step="1" value="30" required inputmode="numeric"></label>
+              <label id="timer-at-field" hidden>执行时间<input id="timer-at" type="datetime-local"></label>
+              <p id="timer-setting" class="field-note">到点发送关机指令。</p><p id="timer-zone" class="field-note"></p>
+              <button id="timer-submit" class="secondary-button" type="submit">添加定时关机</button>
+              <p id="timer-feedback" class="field-note" role="status"></p>
+            </form>
+            <ol id="schedule-list" class="schedule-list" aria-label="定时任务"></ol>
+            <p class="routine-note">任务保存在服务器。取消不会关机；手动控制或定时开关机会结束预制冷。服务器睡眠或离线时无法执行，错过的任务不补发。</p>
+          </section>
           <section class="extras" aria-labelledby="extras-heading"><div class="group-title"><h2 id="extras-heading">更多控制</h2><span>遥控器上的熟悉功能</span></div>
             <div class="extra-grid">
               <button data-button="vertical-step"><svg><use href="#i-vertical"/></svg><span><strong>上下扇叶</strong><small>移动一档</small></span><span class="button-arrow">↗</span></button>
